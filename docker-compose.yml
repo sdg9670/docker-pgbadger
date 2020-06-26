@@ -1,0 +1,14 @@
+version: "3"
+services:
+  pgbadger:
+    build:
+      context: ./
+      args:
+        - PGBADGER_VERSION=11.1
+    container_name: pgbadger
+    volumes:
+      - ./logs:/pgbadger/logs
+      - ./outs:/pgbadger/outs
+    environment:
+      - PARAMETERS=
+      - FILE_NAME=postgresql-*.log
