@@ -1,10 +1,7 @@
 version: "3"
 services:
   pgbadger:
-    build:
-      context: ./
-      args:
-        - PGBADGER_VERSION=11.1
+    image: sdg9670/pgbadger
     container_name: pgbadger
     volumes:
       - ./logs:/pgbadger/logs
