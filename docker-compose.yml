@@ -1,7 +1,7 @@
 version: "3"
 services:
   pgbadger:
-    image: sdg9670/pgbadger
+    image: sdg9670/pgbadger:latest
     container_name: pgbadger
     volumes:
       - ./logs:/pgbadger/logs
