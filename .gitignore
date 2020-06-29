@@ -1,0 +1,4 @@
+/logs/*
+!/logs/README.md
+/outs/*
+!/outs/README.md

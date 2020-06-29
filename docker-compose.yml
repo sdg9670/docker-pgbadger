@@ -7,5 +7,5 @@ services:
       - ./logs:/pgbadger/logs
       - ./outs:/pgbadger/outs
     environment:
-      - PARAMETERS=
-      - FILE_NAME=postgresql-*.log
+      - "PARAMETERS="
+      - "FILE_NAME=postgresql-*.log"
