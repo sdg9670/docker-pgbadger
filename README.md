@@ -1,3 +1,31 @@
 # pgbadger Docker
 
-## create folder: outs, logs
+## How to use
+
+- ### Clone this repository
+```bash
+  git clone https://github.com/sdg9670/docker-pgbadger.git
+```
+
+- ### Edit docker-compose yml
+```yml
+version: "3"
+services:
+  pgbadger:
+    image: sdg9670/pgbadger:latest
+    container_name: pgbadger
+    volumes:
+      - ./logs:/pgbadger/logs
+      - ./outs:/pgbadger/outs
+    environment:
+      # example: "PARAMETERS= --prefix '%t [%p]: user=%u,db=%d,client=%h'"
+      - "PARAMETERS="
+      - "FILE_NAME=postgresql-*.log"
+```
+
+- ### Run docker-compose
+```bash
+docker-compose up
+```
+
+- ### Check ./out folder
