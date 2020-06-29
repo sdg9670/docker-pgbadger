@@ -23,6 +23,8 @@ services:
       - "FILE_NAME=postgresql-*.log"
 ```
 
+- ### Input log files to ./logs
+
 - ### Run docker-compose
 ```bash
 docker-compose up
